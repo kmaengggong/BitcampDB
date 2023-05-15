@@ -78,4 +78,22 @@ INSERT buy_tbl1 VALUES (NULL, 999, '트레이닝복', '의류', 100000, 10000);
     
 SELECT * FROM buy_tbl1;
 
-DELETE FROM user_tbl WHERE user_num = 2;	
+DELETE FROM user_tbl WHERE user_num = 2;
+
+SELECT * FROM user_tbl2;
+SELECT * FROM user_tbl;
+
+DELETE FROM user_tbl2 WHERE entry_date > '2020-08-15';
+DELETE FROM user_tbl2 WHERE entry_date = '2015-03-05';
+
+INSERT user_tbl VALUES
+	(NULL, '이자바', 1996, '서울', 178, '2020-09-01'),
+    (NULL, '신다바', 1992, '경기', 164, '2020-09-01'),
+    (NULL, '최다희', 1998, '경기', 158, '2020-09-01');
+    
+SELECT * FROM user_tbl;
+
+SELECT DISTINCT user_birth_year FROM user_tbl;
+SELECT DISTINCT user_address FROM user_tbl;
+
+SELECT user_name AS '유저명' FROM user_tbl;
